@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0e1116" />
+    <title>ehoser</title>
+    <link rel="stylesheet" href="./site.css" />
+  </head>
+  <body>
+    <section class="gate" id="gate" aria-label="Zugangscode">
+      <form class="gate-card" id="gateForm">
+        <span class="brand-mark">ehoser</span>
+        <h1>Zugangscode eingeben</h1>
+        <div class="gate-row">
+          <input
+            id="gateCode"
+            type="password"
+            inputmode="numeric"
+            autocomplete="off"
+            aria-label="Zugangscode"
+            maxlength="12"
+          />
+          <button type="submit">Oeffnen</button>
+        </div>
+        <p id="gateError" class="gate-error" role="alert"></p>
+      </form>
+    </section>
+
+    <main class="page" id="page" hidden>
+      <nav class="nav">
+        <a class="brand" href="./" aria-label="ehoser Startseite">ehoser</a>
+        <div class="nav-line"></div>
+        <button class="lock-button" id="lockButton" type="button">Sperren</button>
+      </nav>
+
+      <section class="hero" aria-label="ehoser Suche">
+        <p class="eyebrow">exklusiver zugang</p>
+        <h1>ehoser</h1>
+        <form class="search" id="searchForm">
+          <input
+            id="searchInput"
+            type="search"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Suchen oder Webadresse eingeben"
+            aria-label="Suchen oder Webadresse eingeben"
+          />
+          <button type="submit">Suchen</button>
+        </form>
+        <div class="quick-links" aria-label="Schnellzugriff">
+          <button type="button" data-query="https://www.google.com">Google</button>
+          <button type="button" data-query="https://www.youtube.com">YouTube</button>
+          <button type="button" data-query="https://www.opera.com">Opera</button>
+          <button type="button" data-query="https://www.google.com/chrome/">Chrome</button>
+        </div>
+      </section>
+
+      <section class="status-band" aria-label="Status">
+        <span>Privater Startbereich</span>
+        <span>Chromium-ready</span>
+        <span>Vercel Deploy</span>
+      </section>
+    </main>
+
+    <script src="./site.js"></script>
+  </body>
+</html>
