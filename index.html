@@ -35,7 +35,7 @@
       </nav>
 
       <section class="hero" aria-label="ehoser Suche">
-        <p class="eyebrow">exklusiver zugang</p>
+        <p class="eyebrow">exklusive suchmaschine</p>
         <h1>ehoser</h1>
         <form class="search" id="searchForm">
           <input
@@ -56,10 +56,18 @@
         </div>
       </section>
 
+      <section class="results-area" id="resultsArea" aria-live="polite">
+        <div class="results-head">
+          <p id="resultsMeta">Bereit fuer deine Suche.</p>
+          <button type="button" id="clearResults">Leeren</button>
+        </div>
+        <div class="results-list" id="resultsList"></div>
+      </section>
+
       <section class="status-band" aria-label="Status">
         <span>Privater Startbereich</span>
-        <span>Chromium-ready</span>
-        <span>Vercel Deploy</span>
+        <span>ehoser Search</span>
+        <span>Vercel API</span>
       </section>
     </main>
 
