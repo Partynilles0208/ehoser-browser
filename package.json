@@ -1,0 +1,19 @@
+{
+  "name": "ehoser-browser",
+  "version": "1.0.0",
+  "description": "A small real desktop browser powered by Electron/Chromium.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node scripts/start.js"
+  },
+  "keywords": [
+    "browser",
+    "electron",
+    "chromium"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^42.0.1"
+  }
+}

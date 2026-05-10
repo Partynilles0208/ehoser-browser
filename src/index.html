@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ehoser Browser</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section class="access-screen" id="accessScreen" aria-label="Zugangscode">
+      <form class="access-panel" id="accessForm">
+        <p class="access-kicker">Ehoser Browser</p>
+        <h1>Zugangscode eingeben</h1>
+        <div class="code-row">
+          <input id="accessCode" type="password" inputmode="numeric" autocomplete="off" aria-label="Zugangscode" />
+          <button type="submit">Entsperren</button>
+        </div>
+        <p class="access-error" id="accessError" role="alert"></p>
+      </form>
+    </section>
+
+    <main class="browser-shell">
+      <section class="topbar" aria-label="Browser navigation">
+        <div class="window-title">Ehoser</div>
+        <div class="tab-strip" id="tabs"></div>
+        <button class="icon-button" id="newTab" title="Neuer Tab" aria-label="Neuer Tab">+</button>
+      </section>
+
+      <section class="toolbar" aria-label="Adressleiste">
+        <button class="icon-button" id="back" title="Zurueck" aria-label="Zurueck">‹</button>
+        <button class="icon-button" id="forward" title="Vor" aria-label="Vor">›</button>
+        <button class="icon-button" id="reload" title="Neu laden" aria-label="Neu laden">↻</button>
+        <button class="icon-button" id="home" title="Startseite" aria-label="Startseite">⌂</button>
+
+        <form class="address-form" id="addressForm">
+          <input id="address" type="text" autocomplete="off" spellcheck="false" aria-label="Adresse oder Suche" />
+          <button class="go-button" type="submit">Los</button>
+        </form>
+
+        <select id="agentSelect" title="User-Agent">
+          <option value="chrome">Chrome UA</option>
+          <option value="opera">Opera UA</option>
+          <option value="firefox">Firefox UA</option>
+          <option value="edge">Edge UA</option>
+        </select>
+      </section>
+
+      <section class="quickbar" aria-label="Schnellzugriff">
+        <button data-url="https://www.google.com">Google</button>
+        <button data-url="https://www.youtube.com">YouTube</button>
+        <button data-url="https://www.opera.com">Opera</button>
+        <button data-url="https://www.google.com/chrome/">Chrome</button>
+        <button data-url="https://www.mozilla.org/firefox/">Firefox</button>
+      </section>
+
+      <section class="viewport" id="viewport"></section>
+
+      <section class="statusbar">
+        <span id="status">Bereit</span>
+        <span id="security">Chromium WebView</span>
+      </section>
+    </main>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>
